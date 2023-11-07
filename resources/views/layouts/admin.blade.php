@@ -28,7 +28,7 @@
                             <!-- Navigation Links -->
                             <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                                 <x-nav-link :href="route('admin.dashboard')" :active="request()->routeIs('admin.dashboard')">Dashboard</x-nav-link>
-                                <x-nav-link>Evenementen</x-nav-link>
+                                <x-nav-link :href="route('admin.events.index')" :active="request()->routeIs('admin.events.index')">Evenementen</x-nav-link>
                                 <x-nav-link>Gebruikers</x-nav-link>
                                 <x-nav-link>Reserveringen</x-nav-link>
                             </div>
@@ -71,7 +71,7 @@
             @endif
 
             <!-- Page Content -->
-            <main class="max-w-7xl mx-auto my-4">
+            <main class="max-w-7xl mx-auto py-8">
                 {{ $slot }}
             </main>
         </div>
